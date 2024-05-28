@@ -47,3 +47,12 @@ if(counter === db.length) {
 
   changeImg(counter)
 });
+
+gauche.addEventListener("click", ()=> {
+  counter--
+  if(counter < 0) {
+    counter = db.length - 1;
+  }
+  
+    changeImg(counter)
+  });
