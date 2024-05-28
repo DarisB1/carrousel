@@ -1,5 +1,6 @@
 const body = document.querySelector('body')
 let droite = document.querySelector('#d')
+let gauche = document.querySelector('#g')
 
 // ajouter un argument qui vaut l'index de db
 const db = [
