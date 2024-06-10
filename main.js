@@ -10,19 +10,20 @@ const db = [
     alt: "chat brun",
     date: "02/08/23",
   },
+
   {
     name: "chien",
     url: "chien.jpg",
     alt: "chien brun",
     date: "20/04/23",
   },
+
   {
     name: "gecko",
     url: "leopard.jpg",
     alt: "gecko tacheté léopard",
     date: "12/12/12",
-  },
-
+  }
 ];
 
 const div = document.createElement("div");
@@ -32,44 +33,41 @@ function changeImg(i) {
   <h1>${db[i].name}</h1>
   <img src="${db[i].url}" class="tous" alt="${db[i].alt}">
   <p>${db[i].date}</p>
-  `
+  `;
 }
 
 let counter = 0;
-changeImg(counter)
-body.appendChild(div)
+changeImg(counter);
+body.appendChild(div);
 
-droite.addEventListener("click", ()=>{
+droite.addEventListener("click", () => {
   clearInterval(fin);
-  counter++
-  if(counter === db.length){
-    counter = 0
+  counter++;
+  if (counter === db.length) {
+    counter = 0;
   }
   fin = setInterval(() => {
-    counter++
-  if(counter === db.length){
-    counter = 0
-  }
-  changeImg(counter)
+    counter++;
+    if (counter === db.length) {
+      counter = 0;
+    }
+    changeImg(counter);
   }, 5000);
-  changeImg(counter)
+  changeImg(counter);
 });
 
-
-gauche.addEventListener("click", ()=>{
-  counter--
-  if(counter < 0){
-    counter = db.length - 1
+gauche.addEventListener("click", () => {
+  counter--;
+  if (counter < 0) {
+    counter = db.length - 1;
   }
-  changeImg(counter)
+  changeImg(counter);
 });
-
 
 fin = setInterval(() => {
-  counter++
-  if(counter === db.length){
-    counter = 0
+  counter++;
+  if (counter === db.length) {
+    counter = 0;
   }
-  changeImg(counter)
+  changeImg(counter);
 }, 1000);
-
